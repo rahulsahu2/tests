@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <iframe id="theFrame" src="/testpdf.pdf" style="height:1000px; width:100%;"></iframe>
+        
+    </div>
+</body>
+<script>
+    document.getElementById("theFrame").contentWindow.onload = function() {
+        alert("gf");
+        this.document.getElementsByTagName("img")[0].style.width="100%";
+    };
+    </script>
+<script>
+    // document.ready(function(){
+    //     var toolbar = document.getElementsByTagName("viewer-toolbar")[0];
+    // toolbar.style.display = 'none';
+    // });
+    
+</script>
+</html>
